@@ -8,7 +8,7 @@ import torch
 
 # Initialize Flask
 app = Flask(__name__)
-CORS(app)  # Enable CORS for React frontend
+CORS(app, origins=["https://sentiment-analysis-review.vercel.app"])
 
 # Initialize SentimentIntensityAnalyzer (VADER)
 nltk.download('vader_lexicon')
